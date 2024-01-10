@@ -11,8 +11,8 @@
     />
     <link rel="stylesheet" href="./dist/output.css" />
   </head>
-  <body>
-    <main class="p-4 flex lg:justify-between justify-center">
+  <body class="">
+    <main class="p-4 flex lg:justify-between justify-center w-full">
       <!-- HIDDEN BOOK A FLIGHT CONTAINER -->
       <div class="bg-gray-100">
         <div class="container mx-auto mt-8">
@@ -49,7 +49,7 @@
       <div class="lg:flex lg:flex-col hidden lg:px-8">
         <div class="hidden lg:flex">
           <a
-            href="#"
+            href="./index.html"
             class="text-big text-black font-primary lg:pr-8"
             data-aos="fade-down"
             data-aos-duration="1000"
@@ -72,15 +72,23 @@
           </div>
           <!-- LIST ITEMS -->
           <ul
-            class="hidden lg:flex gap-x-5 list-none text-black text-md"
+            class="hidden lg:flex gap-5 list-none text-black text-md"
             data-aos="fade-down"
             data-aos-duration="1000"
           >
             <li>
-              <a href="#" class="hover:border-b border-black">Solutions</a>
+              <a
+                href="./Html sub/solutions.html"
+                class="hover:border-b border-black"
+                >Solutions</a
+              >
             </li>
             <li>
-              <a href="#" class="hover:border-b border-black">About Us</a>
+              <a
+                href="./Html sub/aboutUs.html"
+                class="hover:border-b border-black"
+                >About Us</a
+              >
             </li>
             <li><a href="#" class="hover:border-b border-black">Contact</a></li>
           </ul>
@@ -463,7 +471,11 @@
             1/6
           </div>
           <img src="./images/insideflight6.jpg" class="w-full h-full" />
-          <div class="text">Caption Text</div>
+          <div
+            class="text absolute font-primary lg:text-4xl text-xl text-white bottom-12 right-10"
+          >
+            Comfort
+          </div>
         </div>
 
         <div class="mySlides fade h-full">
@@ -473,7 +485,11 @@
             2/6
           </div>
           <img src="./images/insideflight2.webp" class="w-full h-full" />
-          <div class="text">Caption Two</div>
+          <div
+            class="text absolute font-primary lg:text-4xl text-xl text-white bottom-5 right-10"
+          >
+            Versatality
+          </div>
         </div>
 
         <div class="mySlides fade h-full">
@@ -483,7 +499,11 @@
             3/6
           </div>
           <img src="./images/insideflight3.avif" class="w-full h-full" />
-          <div class="text">Caption Three</div>
+          <div
+            class="text absolute font-primary lg:text-4xl text-xl text-white bottom-5 right-10"
+          >
+            Cost-Effectiveness
+          </div>
         </div>
         <div class="mySlides fade h-full">
           <div
@@ -492,7 +512,11 @@
             4/6
           </div>
           <img src="./images/insideflight4.jpg" class="w-full h-full" />
-          <div class="text">Caption Three</div>
+          <div
+            class="text absolute font-primary lg:text-4xl text-xl text-white bottom-5 right-10"
+          >
+            System Reliability
+          </div>
         </div>
         <div class="mySlides fade h-full">
           <div
@@ -501,16 +525,22 @@
             5/6
           </div>
           <img src="./images/insideflight5.jpg" class="w-full h-full" />
-          <div class="text">Caption Three</div>
+          <div
+            class="text absolute font-primary lg:text-4xl text-xl text-white bottom-5 right-10"
+          >
+            Customer Service
+          </div>
         </div>
-        <div class="mySlides fade bg-slate-300 h-full">
+        <div class="mySlides fade bg-slate-300 h-full w-full">
           <div
             class="numbertext absolute top-1/2 pt-12 right-1/6 bottom-0 text-white text-4xl font-bold"
           >
             6/6
           </div>
-          <div class="py-20 h-full">
-            <div class="flex flex-col leading-10 px-20 lg:py-20 justify-center">
+          <div class="lg:py-20 py-10 h-full">
+            <div
+              class="flex flex-col leading-10 lg:px-20 lg:py-20 justify-center"
+            >
               <div class="flex text-center">
                 <a
                   href="#"
@@ -572,13 +602,101 @@
     <!-- Book A Flight Section -->
     <section class="">
       <div class="gap-4 flex flex-col p-32 text-center">
-        <p class="font-bold text-gray-600">What are you waiting for</p>
-        <a href="#" class="text-6xl font-primary hover:underline"
+        <p
+          data-aos="fade-down"
+          data-aos-duration="1000"
+          class="font-bold text-gray-600"
+        >
+          What are you waiting for
+        </p>
+        <a
+          href="#"
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          class="lg:text-6xl text-4xl font-primary hover:underline"
           >Book A Flight</a
         >
       </div>
     </section>
+    <!-- Footer -->
+    <footer
+      class="flex lg:flex-row flex-col bg-black text-white p-12 lg:justify-between gap-12"
+    >
+      <div class="flex flex-col gap-4 justify-between lg:w-2/6 w-full">
+        <div class="flex">
+          <a href="./index.html" class="text-3xl font-bold font-primary">
+            <span class="lg:text-big text-6xl font-primary">A</span>FLY
+            <sup
+              ><i class="fa-regular fa-registered text-3xl lg:text-2xl"></i
+            ></sup>
+          </a>
+        </div>
+        <div class="flex gap-4 flex-col">
+          <p>Follow Us</p>
+          <div class="flex gap-4">
+            <a href="#" class="rounded-br-lg border-2 border-white p-2"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="#" class="rounded-br-lg border-2 border-white p-2"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="#" class="rounded-br-lg border-2 border-white p-2"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+          </div>
+        </div>
+        <div class="pt-10">
+          <p class="font-primary text-xl">&copy; Afly <sup>&#174;</sup></p>
+          <p class="text-gray-500">
+            Afly® HQ - Eindhoven, The Netherlands Registered on the Dutch
+            Chamber of Commerce: 80195520
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-col justify-between gap-4">
+        <div>
+          <p class="font-bold text-xl">On Demand</p>
+          <a href="" class="text-gray-500 hover:text-white">Private Charter</a>
+        </div>
+        <div class="flex flex-col">
+          <p class="font-bold text-xl">Company</p>
+          <a
+            href="./Html sub/aboutUs.html"
+            class="text-gray-500 hover:text-white"
+            >About Us</a
+          >
+          <a
+            href="./Html sub/solutions.html"
+            class="text-gray-500 hover:text-white"
+            >Solution</a
+          >
+          <a href="" class="text-gray-500 hover:text-white">News</a>
+          <a href="" class="text-gray-500 hover:text-white">Contact</a>
+        </div>
+        <a href="" class="text-gray-500 hover:text-white">Cookies Policy</a>
+      </div>
+      <div class="flex flex-col justify-between gap-4">
+        <div>
+          <p class="font-bold text-xl">Shared Flight</p>
+          <a href="" class="text-gray-500 hover:text-white">Avaliable Flight</a>
+        </div>
+        <div class="flex flex-col">
+          <p class="font-bold text-xl">My Account</p>
+          <a href="" class="text-gray-500 hover:text-white">Register</a>
+          <a href="" class="text-gray-500 hover:text-white">Login</a>
+          <a href="" class="text-gray-500 hover:text-white">Dashboard</a>
+        </div>
+        <a href="" class="text-gray-500 hover:text-white">Terms&Conditions</a>
+      </div>
+      <div class="flex flex-col justify-between gap-4">
+        <div>
+          <p class="font-bold text-xl">Membership</p>
+          <a href="" class="text-gray-500 hover:text-white">Elevate</a>
+        </div>
 
+        <a href="" class="text-gray-500 hover:text-white">Privacy Policy</a>
+      </div>
+    </footer>
     <script src="./app.js"></script>
     <script
       src="https://kit.fontawesome.com/953df531f5.js"

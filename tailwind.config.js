@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html"],
+  content: [
+    "./index.html",
+    "./Html sub/solutions.html",
+    "./Html sub/aboutUs.html",
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -13,6 +17,16 @@ module.exports = {
       },
       borderRadius: {
         lgg: "3rem",
+      },
+      backgroundImage: {
+        "hero-pattern": "url('../images/insideflight2.webp')",
+        "footer-texture": "url('../images/insideflight4.jpg')",
+      },
+      colors: {
+        blueshade: "rgb(98,146,158)",
+      },
+      Height: {
+        128: "32rem",
       },
     },
   },
