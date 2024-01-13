@@ -83,3 +83,22 @@ function showSlides(n) {
   }
   slides[slideIndex - 1].style.display = "block";
 }
+
+var countrySelect = document.getElementById("countryCode");
+console.log(countrySelect);
+
+// Fetch data from the REST Countries API
+fetch("https://restcountries.com/v3.1/all")
+  .then((response) => response.json())
+  .then((countries) => {
+    // Populate the dropdown with options
+    countries.forEach((country) => {
+      var option = document.createElement("option");
+      option.value = "+" + country.callingCodes[0];
+      option.text =
+        "+" + country.callingCodes[0] + " (" + country.name.common + ")";
+      countrySelect.add(option);
+      console.log(countrySelect);
+    });
+  })
+  .catch((error) => console.error("Error fetching country data:", error));

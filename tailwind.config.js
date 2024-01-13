@@ -4,6 +4,7 @@ module.exports = {
     "./index.html",
     "./Html sub/solutions.html",
     "./Html sub/aboutUs.html",
+    "./Html sub/Contact.html",
   ],
   theme: {
     extend: {
@@ -19,7 +20,7 @@ module.exports = {
         lgg: "3rem",
       },
       backgroundImage: {
-        "hero-pattern": "url('../images/insideflight2.webp')",
+        "hero-pattern": "url('../images/contactus4.jpg')",
         "footer-texture": "url('../images/insideflight4.jpg')",
       },
       colors: {
