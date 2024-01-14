@@ -5,6 +5,7 @@ module.exports = {
     "./Html sub/solutions.html",
     "./Html sub/aboutUs.html",
     "./Html sub/Contact.html",
+    "./Html sub/Share-a-flight.html",
   ],
   theme: {
     extend: {
@@ -22,6 +23,7 @@ module.exports = {
       backgroundImage: {
         "hero-pattern": "url('../images/contactus4.jpg')",
         "footer-texture": "url('../images/insideflight4.jpg')",
+        "share-bg": "url('../images/Privatecharter.webp')",
       },
       colors: {
         blueshade: "rgb(98,146,158)",

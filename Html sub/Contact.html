@@ -10,7 +10,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../dist/output.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
   </head>
+
   <body>
     <main
       class="bg-hero-pattern w-full h-dvh bg-cover bg-no-repeat relative opacity-100 rounded-br-lgg"
@@ -62,10 +67,10 @@
                 data-aos="fade-down"
                 data-aos-duration="1000"
               >
-                <a href="#" class="rounded-full p-1 bg-black">
+                <a href="#" class="rounded-full p-1 bg-black text-center" id="airplaneButton">
                   <i class="fa-solid fa-plane p-2 text-white"></i>
                 </a>
-                <a href="#" class="rounded-full p-1 bg-black">
+                <a href="#" class="rounded-full p-1 bg-black text-center" id="menuButton">
                   <i class="fa-solid fa-bars p-2 text-white"></i>
                 </a>
               </div>
@@ -194,123 +199,287 @@
       </div>
     </section>
 
-    <div class="container mx-auto mt-8 p-8 bg-gray-100 rounded-lg shadow-md">
-      <h2 class="text-2xl font-semibold mb-4">Contact Us</h2>
 
-      <form id="contactForm" action="#" method="post">
-        <div class="flex flex-col mb-4">
-          <label for="name" class="text-gray-700">Name</label>
-          <div class="relative">
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Your Name"
-              class="border border-gray-300 rounded-md p-2 pl-8 focus:outline-none focus:border-blue-500"
-            />
-            <div class="absolute top-2 left-2">
-              <svg
-                class="fill-current text-gray-500"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
+    <!-- Message us Section -->
+
+    <section class="p-8 border-t border-black">
+        <div class="flex flex-col lg:flex-row"><p class="w-1/3 text-3xl lg:text-6xl font-primary">Message Us </p>
+        <div class="w-2/3 flex flex-col gap-3"><p class="text-xl">Fill in the information required in the form and we will get back to you within one hour. Or contact Afly® via our social media channels.</p>
+                  <div class="flex gap-4">
+            <a href="#" class="rounded-full bg-black p-2"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="#" class="rounded-full bg-black p-2"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="#" class="rounded-full bg-black p-2"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+          </div>
+        <p class="text-xl">Your information will be kept private and confidential and will be used by Afly® only. Fields marked * must be completed before submitting. All details provided by you will be held by Afly® and used in accordance with our Privacy Policy.</p>
+<form id="myForm" class="flex flex-col w-full gap-5 lg:w-2/3">
+<div class="flex flex-col">   <label for="name" class="text-xs p-1">Name*</label>
+    <input type="text" id="name" name="name" required class="p-1 border-b" placeholder="NAME" /></div>
+
+    <div class="flex flex-col"><label for="email" class="text-xs p-1">Email*</label>
+    <input type="email" id="email" name="email" required  class="p-1 border-b" placeholder="EMAIL"/>
+</div>
+<div class="flex flex-col">
+      <label for="phone" class="text-xs p-1">Phone:</label>
+    <input type="tel" id="phone" name="phone" required class="p-1 border-b w-full" placeholder="Enter Your Phone Number" />
+</div>
+
+<div class="flex flex-col">    <label for="message" class="p-1 text-xs">Message:</label>
+    <textarea id="message" name="message" rows="4" required class="p-1 border-b w-full" placeholder="Type Here"></textarea></div>
+
+    <button type="submit" class="bg-black text-white font-bold p-2 hover:bg-gray-600 rounded-lg w-36">Send Message</button>
+  </form>
+    </section>
+
+        <!-- Sidebar Container -->
+    <div
+      id="sidebar"
+      class="fixed p-8 top-0 right-0 h-full bg-white w-full lg:w-1/2 overflow-hidden transform translate-x-full transition-transform duration-300 ease-in-out"
+    >
+      <!-- Close Button -->
+      <div class="flex gap-10 justify-end">
+        <button
+          id="closeButton"
+          class="text-gray-600 ml-4 mt-4 focus:outline-none"
+        >
+          <i class="fas fa-times text-2xl"></i>
+        </button>
+        <button class="p-2 bg-black w-20 rounded-xl text-white font-bold">
+          Login
+        </button>
+        <button class="p-2 bg-black w-20 rounded-xl text-white font-bold">
+          Register
+        </button>
+      </div>
+
+      <!-- Menu Items -->
+      <div class="flex lg:flex-row flex-col justify-between pt-32 lg:p-16">
+        <div class="flex flex-col justify-between gap-4">
+          <div class="flex justify-between lg:flex-col flex-row lg:gap-[7rem]">
+            <div>
+              <p class="font-bold text-xl lg:text-3xl py-3">On Demand</p>
+              <a href="" class="text-gray-500 hover:text-black text-xl"
+                >Private Charter</a
               >
-                <path
-                  d="M10 12a2 2 0 100-4 2 2 0 000 4zM4 6a2 2 0 100-4 2 2 0 000 4zm12 0a2 2 0 100-4 2 2 0 000 4zm0 8a2 2 0 100-4 2 2 0 000 4zM4 14a2 2 0 100-4 2 2 0 000 4z"
-                />
-              </svg>
+            </div>
+            <div class="flex flex-col gap-3">
+              <p class="font-bold text-xl lg:text-3xl py-3">Company</p>
+              <a
+                href="./aboutUs.html"
+                class="text-gray-500 text-xl hover:text-black"
+                >About Us</a
+              >
+              <a
+                href="./solutions.html"
+                class="text-gray-500 text-xl hover:text-black"
+                >Solution</a
+              >
+              <a href="" class="text-gray-500 hover:text-black text-xl">News</a>
+              <a
+                href="./Contact.html"
+                class="text-gray-500 text-xl hover:text-black"
+                >Contact</a
+              >
             </div>
           </div>
+          <a href="" class="text-gray-500 hover:text-black text-xl"
+            >Cookies Policy</a
+          >
         </div>
-
-        <div class="flex flex-col mb-4">
-          <label for="email" class="text-gray-700">Email</label>
-          <div class="relative">
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Your Email"
-              class="border border-gray-300 rounded-md p-2 pl-8 focus:outline-none focus:border-blue-500"
-            />
-            <div class="absolute top-2 left-2">
-              <svg
-                class="fill-current text-gray-500"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  d="M10 12a2 2 0 100-4 2 2 0 000 4zM4 6a2 2 0 100-4 2 2 0 000 4zm12 0a2 2 0 100-4 2 2 0 000 4zm0 8a2 2 0 100-4 2 2 0 000 4zM4 14a2 2 0 100-4 2 2 0 000 4z"
-                />
-              </svg>
-            </div>
-          </div>
-        </div>
-
-        <div class="flex flex-col mb-4">
-          <label for="phone" class="text-gray-700">Phone</label>
-          <div class="relative flex items-center">
-            <select
-              id="countryCode"
-              name="countryCode"
-              class="border border-gray-300 rounded-l-md p-2 focus:outline-none focus:border-blue-500"
+        <div class="flex flex-row lg:flex-col justify-between gap-4">
+          <div>
+            <p class="font-bold text-xl lg:text-3xl py-3">Shared Flight</p>
+            <a
+              href="./Share-a-flight.html"
+              class="text-gray-500 hover:text-black text-xl"
+              >Avaliable Flight</a
             >
-              <!-- Dynamically generate options with country codes -->
-              <option value="+1">+1</option>
-              <!-- Add more options as needed -->
-            </select>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              placeholder="Your Phone"
-              class="border border-gray-300 rounded-r-md p-2 focus:outline-none focus:border-blue-500 flex-1"
-            />
+          </div>
+          <div class="flex flex-col">
+            <p class="font-bold text-xl lg:text-3xl py-3">My Account</p>
+            <a href="" class="text-gray-500 hover:text-black text-xl"
+              >Dashboard</a
+            >
           </div>
         </div>
 
-        <!-- Add other form fields as needed -->
-
-        <div class="flex flex-col mb-4">
-          <label for="message" class="text-gray-700">Message</label>
-          <div class="relative">
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Your Message"
-              class="border border-gray-300 rounded-md p-2 pl-8 focus:outline-none focus:border-blue-500 resize-none"
-              rows="4"
-            ></textarea>
-            <div class="absolute top-2 left-2">
-              <svg
-                class="fill-current text-gray-500"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  d="M10 12a2 2 0 100-4 2 2 0 000 4zM4 6a2 2 0 100-4 2 2 0 000 4zm12 0a2 2 0 100-4 2 2 0 000 4zm0 8a2 2 0 100-4 2 2 0 000 4zM4 14a2 2 0 100-4 2 2 0 000 4z"
-                />
-              </svg>
-            </div>
+        <div class="flex flex-col justify-between gap-4">
+          <div>
+            <p class="font-bold text-xl lg:text-3xl py-3">Membership</p>
+            <a href="" class="text-gray-500 hover:text-black text-xl"
+              >Elevate</a
+            >
           </div>
+
+          <a href="" class="text-gray-500 hover:text-black text-xl"
+            >Privacy Policy</a
+          >
+          <a href="" class="text-gray-500 hover:text-black text-xl"
+            >Terms&Conditions</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Airplane Slidebar -->
+
+    <div
+      id="airsidebar"
+      class="fixed top-0 right-0 h-full bg-white w-full lg:w-1/3 overflow-hidden transform translate-x-full transition-transform duration-300 ease-in-out"
+    >
+      <!-- Close Button -->
+      <div class="flex flex-col bg-black p-8 gap-10">
+        <div class="flex gap-10 justify-between">
+          <button
+            id="aircloseButton"
+            class="text-gray-600 bg-white focus:outline-none rounded-full py-3 px-4 text-center"
+          >
+            <i class="fas fa-times text-2xl"></i>
+          </button>
+          <button class="bg-orange-800 w-36 rounded-xl text-white font-bold">
+            Shared Flight
+          </button>
+        </div>
+        <p class="lg:text-5xl text-3xl font-primary text-white">
+          Book A Flight
+        </p>
+      </div>
+
+      <!-- Menu form -->
+      <form id="myForm" class="flex flex-col w-full gap-5 p-8">
+        <div class="flex flex-col">
+          <label for="name" class="text-xs p-1">From*</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            class="p-1 border-b"
+            placeholder="From Where"
+          />
         </div>
 
+        <div class="flex flex-col">
+          <label for="email" class="text-xs p-1">To*</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            class="p-1 border-b"
+            placeholder="To Where"
+          />
+        </div>
+
+        <div class="flex flex-col">
+          <label for="name" class="text-xs p-1">Passenger*</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            class="p-1 border-b"
+            placeholder="Number Of Passengers"
+          />
+        </div>
         <button
           type="submit"
-          class="bg-blue-500 text-white font-semibold py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue active:bg-blue-800"
+          class="bg-black text-white font-bold p-2 hover:bg-gray-600 rounded-lg w-36"
         >
-          Submit
+          Procced
         </button>
       </form>
     </div>
 
-    <script>
-      // Simple form validation using JavaScript
-    </script>
+    <footer
+      class="flex lg:flex-row flex-col bg-black text-white p-5 lg:p-12 lg:justify-between gap-12"
+    >
+      <div class="flex flex-col gap-4 justify-between lg:w-2/6 w-full">
+        <div class="flex">
+          <a href="#" class="text-3xl font-bold font-primary">
+            <span class="lg:text-big text-6xl font-primary">A</span>FLY
+            <sup
+              ><i class="fa-regular fa-registered text-3xl lg:text-2xl"></i
+            ></sup>
+          </a>
+        </div>
+        <div class="flex gap-4 flex-col">
+          <p>Follow Us</p>
+          <div class="flex gap-4">
+            <a href="#" class="rounded-br-lg border-2 border-white p-2"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="#" class="rounded-br-lg border-2 border-white p-2"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="#" class="rounded-br-lg border-2 border-white p-2"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+          </div>
+        </div>
+        <div class="pt-10">
+          <p class="font-primary text-xl">&copy; Afly <sup>&#174;</sup></p>
+          <p class="text-gray-500">
+            Afly® HQ - Eindhoven, The Netherlands Registered on the Dutch
+            Chamber of Commerce: 80195520
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-col justify-between gap-4">
+        <div class="flex justify-between lg:flex-col flex-row lg:gap-[7rem]">
+          <div>
+            <p class="font-bold text-xl">On Demand</p>
+            <a href="" class="text-gray-500 hover:text-white"
+              >Private Charter</a
+            >
+          </div>
+          <div class="flex flex-col">
+            <p class="font-bold text-xl">Company</p>
+            <a href="./aboutUs.html" class="text-gray-500 hover:text-white">About Us</a>
+            <a
+              href="./solutions.html"
+              class="text-gray-500 hover:text-white"
+              >Solution</a
+            >
+            <a href="" class="text-gray-500 hover:text-white">News</a>
+            <a href="#" class="text-gray-500 hover:text-white"
+              >Contact</a
+            >
+          </div>
+        </div>
+        <a href="" class="text-gray-500 hover:text-white">Cookies Policy</a>
+      </div>
+      <div class="flex flex-row lg:flex-col justify-between gap-4">
+        <div>
+          <p class="font-bold text-xl">Shared Flight</p>
+          <a href="./Share-a-flight.html" class="text-gray-500 hover:text-white">Avaliable Flight</a>
+        </div>
+        <div class="flex flex-col">
+          <p class="font-bold text-xl">My Account</p>
+          <a href="" class="text-gray-500 hover:text-white">Register</a>
+          <a href="" class="text-gray-500 hover:text-white">Login</a>
+          <a href="" class="text-gray-500 hover:text-white">Dashboard</a>
+        </div>
+      </div>
 
-    <script src="../app.js"></script>
+      <div class="flex flex-col justify-between gap-4">
+        <div>
+          <p class="font-bold text-xl">Membership</p>
+          <a href="" class="text-gray-500 hover:text-white">Elevate</a>
+        </div>
+
+        <a href="" class="text-gray-500 hover:text-white">Privacy Policy</a>
+        <a href="" class="text-gray-500 hover:text-white">Terms&Conditions</a>
+      </div>
+    </footer>
+
+    <script src="../Script/contact.js"></script>
+    <script src="../Script/global.js"></script>
     <script
       src="https://kit.fontawesome.com/953df531f5.js"
       crossorigin="anonymous"
@@ -319,5 +488,10 @@
     <script>
       AOS.init({ once: true });
     </script>
+
+ </head>
+ <body>
+ </body>
+</html>
   </body>
 </html>
